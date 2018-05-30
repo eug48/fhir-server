@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/intervention-engine/fhir/auth"
-	"github.com/intervention-engine/fhir/server"
-	"github.com/mitre/fhir-server/middleware"
+	"github.com/eug48/fhir/auth"
+	"github.com/eug48/fhir/server"
+	"github.com/eug48/fhir-server/middleware"
 )
 
 func main() {
