@@ -8,6 +8,7 @@ import (
 
 	"github.com/intervention-engine/fhir/auth"
 	"github.com/intervention-engine/fhir/server"
+	"github.com/mitre/fhir-server/middleware"
 )
 
 func main() {
@@ -46,6 +47,9 @@ func main() {
 		s.Engine.Use(server.RequestLoggerHandler)
 	}
 	// s.Engine.Use(server.RequestLoggerHandler)
+
+	// Mutex middleware to work around the lack of proper transactions in MongoDB (at least until MongoDB 4.0)
+	s.Engine.Use(client_specified_mutexes.Middleware())
 
 	s.Run()
 }
