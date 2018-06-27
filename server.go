@@ -61,11 +61,9 @@ func main() {
 	if *reqLog {
 		s.Engine.Use(server.RequestLoggerHandler)
 	}
-	// s.Engine.Use(server.RequestLoggerHandler)
 
 	// Mutex middleware to work around the lack of proper transactions in MongoDB (at least until MongoDB 4.0)
 	s.Engine.Use(client_specified_mutexes.Middleware())
-	s.Engine.StaticFile("metadata", "capability_statement.json")
 
 	s.Run()
 }
