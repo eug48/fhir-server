@@ -1,10 +1,10 @@
 # fhir-server
-A fast, open source, HL7 FHIR server
+A fast, open source, HL7 FHIR server.
 
-This project provides [HL7 FHIR DSTU2](http://hl7.org/fhir/DSTU2/index.html) models and a generic FHIR server implemented in Go and using MongoDB as storage. This is not a complete implementation, as it is tuned toward the primary use cases of the [Intervention Engine](https://github.com/intervention-engine/ie), [eCQM Engine](https://github.com/mitre/ecqm), [Patient Matching Test Harness](https://github.com/mitre/ptmatch)
- +and [Synthetic Mass](https://github.com/synthetichealth/syntheticmass) projects.
+This project provides [HL7 FHIR STU3](http://hl7.org/fhir/STU3/index.html) models and a generic FHIR server implemented in Go and using MongoDB as storage. This is not a complete implementation, as it is tuned toward the primary use cases of the [Intervention Engine](https://github.com/intervention-engine/ie), [eCQM Engine](https://github.com/mitre/ecqm), [Patient Matching Test Harness](https://github.com/mitre/ptmatch)
+ and [Synthetic Mass](https://github.com/synthetichealth/syntheticmass) projects.
 
-The code in this project is a small wrapper around the [FHIR Server Library](https://github.com/intervention-engine/fhir).
+It is a small wrapper around the [FHIR Server Library](https://github.com/eug48/fhir).
 
 ## Building and Running fhir-server Locally
 To install the FHIR server, please begin by referencing the following sections of the Intervention Engine install guide:
